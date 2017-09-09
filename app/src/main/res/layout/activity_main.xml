@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_expand_listview"
+        android:onClick="btnExpandListView"
+        android:text="click to ExpandListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_dialog"
+        android:onClick="btnDialog"
+        android:text="click to Dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_config"
+        android:onClick="btnConfiguration"
+        android:text="click to Configuration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_handler"
+        android:onClick="btnHandler"
+        android:text="click to Handler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_clipDrawable"
+        android:onClick="btnClipDrawable"
+        android:text="click to ClipDrawable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_menuRes"
+        android:onClick="btnMenuRes"
+        android:text="click to MenuRes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_DoubleBufferDraw"
+        android:onClick="btnDoubleBufferDraw"
+        android:text="click to DoubleBufferDraw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_MoveBackground"
+        android:onClick="btnMoveBackground"
+        android:text="click to MoveBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

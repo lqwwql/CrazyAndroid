@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CrazyAndroid</string>
+    <string name="menu_title">菜单练习</string>
+    <string name="title_item01">机械</string>
+    <string name="title_item02">联盟</string>
+    <string name="title_item03">部落</string>
+    <string name="title_item04">正义</string>
+    <string name="title_color01">红色</string>
+    <string name="title_color02">绿色</string>
+    <string name="title_color03">蓝色</string>
+    <string name="title_color">颜色菜单</string>
+    <string name="title_normal">普通菜单</string>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/menu_title" android:icon="@drawable/ptt_1">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/item01" android:title="@string/title_item01"/>
+                <item android:id="@+id/item02" android:title="@string/title_item02"/>
+                <item android:id="@+id/item03" android:title="@string/title_item03"/>
+                <item android:id="@+id/item04" android:title="@string/title_item04"/>
+            </group>
+        </menu>
+    </item>
+
+    <item android:id="@+id/normal_item" android:title="@string/title_normal"></item>
+
+    <item android:title="@string/menu_title" android:icon="@drawable/ptt_2">
+        <menu>
+            <group>
+                <item android:id="@+id/color01" android:title="@string/title_color01"/>
+                <item android:id="@+id/color02" android:title="@string/title_color02"/>
+                <item android:id="@+id/color03" android:title="@string/title_color03"/>
+            </group>
+        </menu>
+    </item>
+</menu>
