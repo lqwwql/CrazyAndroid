@@ -45,4 +45,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this,MoveBackgroundActivity.class));
     }
 
+    public void btnSqlite(View view){
+        startActivity(new Intent(this,SQLiteActivity.class));
+    }
+
 }
