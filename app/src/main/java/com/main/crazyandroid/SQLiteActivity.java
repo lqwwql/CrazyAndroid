@@ -34,7 +34,7 @@ public class SQLiteActivity extends Activity {
         //创建或打开数据库,此处要用绝对路径,创建在当前APP路径下
         db = SQLiteDatabase.openOrCreateDatabase(this.getFilesDir()+"/my.db3",null);
         //创建表
-        db.execSQL("drop table student");
+        db.execSQL("drop table if exists student");
         db.execSQL("create table student (id integer primary key autoincrement," +
                 "name varchar(20))");
         //写入数据
