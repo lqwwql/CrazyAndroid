@@ -3,7 +3,6 @@ package com.github.okhttp3practice;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -25,15 +24,20 @@ public class MainActivity extends AppCompatActivity {
         btn_connect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /*HttpClientTest
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
                         new HttpClientTest().useHttpClientPost("http://www.baidu.com");
                         new HttpClientTest().useHttpClientGet("http://www.baidu.com");
                     }
+                }).start();*/
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        new HttpUrlConnectionTest().useHttpUrlConnectionPost("http://www.baidu.com");
+                    }
                 }).start();
-                Log.d("results is : ",results);
-                txt_result.setText(results);
             }
         });
 

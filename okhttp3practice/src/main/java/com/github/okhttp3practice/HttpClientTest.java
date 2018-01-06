@@ -103,7 +103,7 @@ public class HttpClientTest {
         }
     }
 
-    private String converStreamToString(InputStream is) throws IOException {
+    public String converStreamToString(InputStream is) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(is));
         StringBuffer sb = new StringBuffer();
         String line = null;
