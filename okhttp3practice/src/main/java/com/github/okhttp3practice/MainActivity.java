@@ -10,7 +10,6 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private TextView txt_result;
-    private String results = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +31,18 @@ public class MainActivity extends AppCompatActivity {
                         new HttpClientTest().useHttpClientGet("http://www.baidu.com");
                     }
                 }).start();*/
+                /*HttpURLConnectionTest
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
                         new HttpUrlConnectionTest().useHttpUrlConnectionPost("http://www.baidu.com");
+                    }
+                }).start();*/
+
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        new OkHttpTest().getAsynHttpGET();
                     }
                 }).start();
             }
