@@ -39,19 +39,27 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }).start();*/
 
-                /*OkHttpClientTest
+                /*OkHttpClientTest GET请求
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
                         new OkHttpTest().getAsynHttpGET();
                     }
                 }).start();*/
+                //OkHttpClientTest POST请求
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        new OkHttpTest().getAsynPost();
+                    }
+                }).start();
+                /*download img test
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
                         new OkHttpTest(MainActivity.this).downloadImage();
                     }
-                }).start();
+                }).start();*/
             }
         });
 
