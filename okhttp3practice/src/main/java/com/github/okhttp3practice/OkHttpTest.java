@@ -4,11 +4,14 @@ import android.content.Context;
 import android.os.Environment;
 import android.util.Log;
 
+import com.alibaba.fastjson.JSONObject;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
+import javabean.Users;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.FormBody;
@@ -34,16 +37,17 @@ public class OkHttpTest {
         this.context =context;
     }
 
-    public void getAsynHttpGET() {
+    public void getAsynHttpGET(String url) {
         //创建okhttpclient对象
         OkHttpClient mOkHttpClient = new OkHttpClient();
         //设置请求参数
-        Request.Builder requestBuilder = new Request.Builder().url("http://www.baidu.com");
+        Request.Builder requestBuilder = new Request.Builder().url(url);
         //可以省略，默认是GET请求
         requestBuilder.method("GET", null);
         Request request = requestBuilder.build();
         //创建call
         Call mCall = mOkHttpClient.newCall(request);
+
         mCall.enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
@@ -54,19 +58,22 @@ public class OkHttpTest {
             public void onResponse(Call call, Response response) throws IOException {
                 if (response.cacheResponse() != null) {
                     String str = response.cacheResponse().toString();
+                    JSONObject jsonObject = com.alibaba.fastjson.JSON.parseObject(str);
                     Log.i("okhttp3", "cache-----" + str);
+                    Log.i("okhttp3","userName----"+jsonObject.getString("userName"));
                 } else {
-
                     String str = response.networkResponse().toString();
+                    String body = response.body().string();
+                    Users user = com.alibaba.fastjson.JSON.parseObject(body,Users.class);
                     Log.i("okhttp3","network----"+str);
-                    Log.i("okhttp3","body----"+response.body().string());
+                    Log.i("okhttp3","userName----"+user.getUserNickName());
                 }
             }
         });
     }
 
     //异步post请求
-    public void getAsynPost(){
+    public void getAsynPost(String url){
         //第一步，都是okhttpclient对象
         OkHttpClient mOkHttpClient = new OkHttpClient();
         //第二步,创建FromBody
@@ -76,7 +83,7 @@ public class OkHttpTest {
                 .build();
         //第三步，创建Request请求
         Request request = new Request.Builder()
-                .url("http://www.baidu.com")
+                .url(url)
                 .post(mFormBody)
                 .build();
         //第四步，创建call对象，建立连接，异步请求

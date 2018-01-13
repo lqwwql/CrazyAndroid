@@ -1,5 +1,6 @@
 package com.github.okhttp3practice;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
@@ -47,12 +48,12 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }).start();*/
                 //OkHttpClientTest POST请求
-                new Thread(new Runnable() {
+                /*new Thread(new Runnable() {
                     @Override
                     public void run() {
                         new OkHttpTest().getAsynPost();
                     }
-                }).start();
+                }).start();*/
                 /*download img test
                 new Thread(new Runnable() {
                     @Override
@@ -65,6 +66,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
+    public void btnOkHttpActivity(View view){
+        startActivity(new Intent(this,OkhttpActivity.class));
+    }
 
 }
