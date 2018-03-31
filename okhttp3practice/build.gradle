@@ -43,5 +43,8 @@ dependencies {
     compile group: 'com.github.bumptech.glide', name: 'glide', version: '3.7.0'
     /*Android数据库轻量级-https://mvnrepository.com/artifact/de.greenrobot/greendao*/
     compile group: 'de.greenrobot', name: 'greendao', version: '1.3.7'
+    /*注解框架-https://mvnrepository.com/artifact/com.jakewharton/butterknife*/
+//    apt 'com.jakewharton:butterknife-compiler:8.0.1'
+    compile 'com.jakewharton:butterknife:8.0.1'
     testCompile 'junit:junit:4.12'
 }

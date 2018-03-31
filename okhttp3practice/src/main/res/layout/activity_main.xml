@@ -16,7 +16,7 @@
         android:scrollbars="vertical"
         android:fadeScrollbars="false"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="wrap_content"
         android:text="Hello World!" />
 
     <Button
@@ -30,4 +30,5 @@
         android:layout_height="wrap_content"
         android:onClick="btnOkHttpActivity"
         android:text="turn to okhttpactivity"/>
+
 </LinearLayout>

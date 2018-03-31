@@ -131,6 +131,39 @@ public class OkHttpTest {
         });
     }
 
+    public void downloadBook(){
+        //第一步，构建okhttpclient对象
+        OkHttpClient mOkHttpClient = new OkHttpClient();
+
+        //第二步，构建request对象
+        Request request = new Request.Builder()
+                .url("http://localhost:8080/YuDongReader/static/books/book001.txt")
+                .build();
+        //第三部，建立练习，构建call任务,异步执行，回调
+        mOkHttpClient.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                InputStream mInputStream = response.body().byteStream();
+                FileOutputStream mFileOutputStream = null;
+
+                File file = new File(context.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS), "斗破苍穹.txt");//文件保存路径
+
+                mFileOutputStream = new FileOutputStream(file);
+                byte[] buffer = new byte[1024];
+                int len = 0;
+                while((len=mInputStream.read(buffer))!=-1){
+                    mFileOutputStream.write(buffer,0,len);
+                }
+                mFileOutputStream.flush();
+                Log.i("okhttp3","download file success!");
+            }
+        });
+    }
+
     //判断是否有sdcard
     public boolean ifExistSdCard(){
         String status = Environment.getExternalStorageState();

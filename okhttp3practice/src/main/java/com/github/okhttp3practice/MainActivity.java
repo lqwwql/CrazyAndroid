@@ -61,6 +61,13 @@ public class MainActivity extends AppCompatActivity {
                         new OkHttpTest(MainActivity.this).downloadImage();
                     }
                 }).start();*/
+                /*download book test*/
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        new OkHttpTest(MainActivity.this).downloadBook();
+                    }
+                }).start();
             }
         });
 
@@ -69,5 +76,4 @@ public class MainActivity extends AppCompatActivity {
     public void btnOkHttpActivity(View view){
         startActivity(new Intent(this,OkhttpActivity.class));
     }
-
 }
