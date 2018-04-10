@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.main.contentprovider.ContentProviderActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -47,6 +49,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void btnSqlite(View view){
         startActivity(new Intent(this,SQLiteActivity.class));
+    }
+
+    public void btnContentprovider(View view){
+        startActivity(new Intent(this,ContentProviderActivity.class));
     }
 
 }

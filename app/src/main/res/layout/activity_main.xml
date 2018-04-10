@@ -68,4 +68,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <Button
+        android:id="@+id/btn_contentprovider"
+        android:onClick="btnContentprovider"
+        android:text="click to Contentprovider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 </LinearLayout>

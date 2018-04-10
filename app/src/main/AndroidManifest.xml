@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.main.crazyandroid">
 
-    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"></uses-permission>
-    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"></uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
 
     <application
         android:allowBackup="true"
@@ -18,22 +18,29 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ExpandedListViewActivity" />
+        <activity android:name=".DialogActivity" />
+        <activity android:name=".HandlerActivity" />
+        <activity android:name=".ClipDrawableActivity" />
+        <activity android:name=".MenuResActivity" />
+        <activity android:name=".DoubleBufferDrawActivity" />
+        <activity android:name=".MoveBackgroundActivity" />
+        <activity android:name=".SQLiteActivity" />
+        <activity
+            android:name=".ConfigurationActivity"
+            android:configChanges="keyboard|keyboardHidden" />
 
-        <activity android:name=".ExpandedListViewActivity" ></activity>
+        <activity android:name="com.main.contentprovider.ContentProviderActivity"></activity>
 
-        <activity android:name=".DialogActivity" ></activity>
+        <!--注册内容提供器-->
+        <provider
+            android:authorities="com.main.contentprovider"
+            android:name="com.main.contentprovider.MyContentProvider"
+            android:enabled="true"
+            android:exported="true">
 
-        <activity android:name=".HandlerActivity" ></activity>
+        </provider>
 
-        <activity android:name=".ClipDrawableActivity" ></activity>
-
-        <activity android:name=".MenuResActivity" ></activity>
-
-        <activity android:name=".DoubleBufferDrawActivity" ></activity>
-
-        <activity android:name=".MoveBackgroundActivity" ></activity>
-
-        <activity android:name=".ConfigurationActivity" android:configChanges="keyboard|keyboardHidden" ></activity>
     </application>
 
 </manifest>
