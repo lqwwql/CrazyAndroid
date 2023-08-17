@@ -1,4 +1,4 @@
-package com.main.crazyandroid;
+package com.main.crazyandroid.activity;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,6 +10,8 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.main.crazyandroid.R;
 
 /**
  * Created by Administrator on 2017/9/2.

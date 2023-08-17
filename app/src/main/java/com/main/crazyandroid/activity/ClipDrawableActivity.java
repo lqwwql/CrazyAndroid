@@ -1,4 +1,4 @@
-package com.main.crazyandroid;
+package com.main.crazyandroid.activity;
 
 import android.app.Activity;
 import android.graphics.drawable.ClipDrawable;
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.widget.ImageView;
+
+import com.main.crazyandroid.R;
 
 import java.util.Timer;
 import java.util.TimerTask;

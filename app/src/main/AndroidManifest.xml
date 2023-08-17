@@ -2,44 +2,44 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.main.crazyandroid">
 
-    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/umber"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ExpandedListViewActivity" />
-        <activity android:name=".DialogActivity" />
-        <activity android:name=".HandlerActivity" />
-        <activity android:name=".ClipDrawableActivity" />
-        <activity android:name=".MenuResActivity" />
-        <activity android:name=".DoubleBufferDrawActivity" />
-        <activity android:name=".MoveBackgroundActivity" />
-        <activity android:name=".SQLiteActivity" />
+        <activity android:name=".activity.ExpandedListViewActivity" />
+        <activity android:name=".activity.DialogActivity" />
+        <activity android:name=".activity.HandlerActivity" />
+        <activity android:name=".activity.ClipDrawableActivity" />
+        <activity android:name=".activity.MenuResActivity" />
+        <activity android:name=".activity.DoubleBufferDrawActivity" />
+        <activity android:name=".activity.MoveBackgroundActivity" />
+        <activity android:name=".activity.SQLiteActivity" />
         <activity
-            android:name=".ConfigurationActivity"
+            android:name=".activity.ConfigurationActivity"
             android:configChanges="keyboard|keyboardHidden" />
 
-        <activity android:name="com.main.contentprovider.ContentProviderActivity"></activity>
+      <!--  <activity android:name="com.main.contentprovider.ContentProviderActivity"></activity>
 
-        <!--注册内容提供器-->
+        &lt;!&ndash;注册内容提供器&ndash;&gt;
         <provider
             android:authorities="com.main.contentprovider"
             android:name="com.main.contentprovider.MyContentProvider"
             android:enabled="true"
             android:exported="true">
 
-        </provider>
+        </provider>-->
 
     </application>
 

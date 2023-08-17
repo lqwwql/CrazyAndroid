@@ -1,4 +1,4 @@
-package com.main.crazyandroid;
+package com.main.crazyandroid.activity;
 
 import android.app.Activity;
 import android.database.DataSetObserver;
@@ -12,6 +12,8 @@ import android.widget.ExpandableListView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.main.crazyandroid.R;
 
 /**
  * Created by Administrator on 2017/9/2.

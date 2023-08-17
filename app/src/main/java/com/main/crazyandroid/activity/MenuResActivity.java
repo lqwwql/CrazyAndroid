@@ -1,4 +1,4 @@
-package com.main.crazyandroid;
+package com.main.crazyandroid.activity;
 
 import android.app.Activity;
 import android.graphics.Color;
@@ -9,6 +9,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+
+import com.main.crazyandroid.R;
 
 /**
  * Created by Administrator on 2017/9/3.

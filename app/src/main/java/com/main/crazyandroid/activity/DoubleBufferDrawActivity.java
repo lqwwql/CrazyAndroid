@@ -1,7 +1,9 @@
-package com.main.crazyandroid;
+package com.main.crazyandroid.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
+
+import com.main.crazyandroid.R;
 
 /**
  * Created by Administrator on 2017/9/6.

@@ -1,4 +1,4 @@
-package com.main.view;
+package com.main.crazyandroid.view;
 
 import android.content.Context;
 import android.graphics.Bitmap;

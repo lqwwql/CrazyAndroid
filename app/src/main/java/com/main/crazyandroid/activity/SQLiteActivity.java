@@ -1,4 +1,4 @@
-package com.main.crazyandroid;
+package com.main.crazyandroid.activity;
 
 import android.app.Activity;
 import android.database.Cursor;
@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+
+import com.main.crazyandroid.R;
 
 /**
  * Created by Administrator on 2017/10/12.
